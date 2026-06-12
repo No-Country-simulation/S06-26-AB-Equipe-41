@@ -3,7 +3,9 @@
 ## Semana 0 - Setup Inicial | Diomara
 
 ### O que esse código faz hoje
+
 Servidor básico em Flask. Tem só 1 rota `GET /` que returna uma frase.
+
 Serve para provar que o ambiente Python + Flask está funcionando.
 
 ### Como rodar na tua máquina - PASSO A PASSO
@@ -11,7 +13,7 @@ Serve para provar que o ambiente Python + Flask está funcionando.
 **Passo 1: Baixar o código**
 
 Se ainda não tem o projeto:
-    bash
+   bash
 git clone https://github.com/No-Country-simulation/S06-26-AB-Equipe-41.git
 cd S06-26-AB-Equipe-41/backend
 git checkout backend-diomara
@@ -31,11 +33,11 @@ py -m pip install flask
 
 **Passo 3: Ligar o servidor**
 
-Ainda no terminal degite: 
+Ainda no terminal degite:
 
 py app.py
 
-O terminal irá retornar :
+O terminal irá retornar:
 
 Running on http://127.0.0.1:5000
 Deixa rodando.
