@@ -22,7 +22,6 @@ Servidor Flask com 2 endpoints funcionais:
 **Status:** Funcinando.
 
 **Exemplo de resposta `/dados` - DADOS FICTÍCIOS:**
-
 ```json
 
 {
@@ -31,6 +30,7 @@ Servidor Flask com 2 endpoints funcionais:
     "valor": "85",
     "unidade": "%"
 }
+```
 
 **Passo 1: Baixar o código**
 
@@ -53,6 +53,7 @@ No mesmo terminal digite:
 
 py app.py
 
+
 #______________________________________________________________________________________________________________________#
 
 ## Semana 0 - Setup Inicial | Diomara
@@ -70,14 +71,14 @@ Serve para provar que o ambiente Python + Flask está funcionando.
 
 Se ainda não tem o projeto:
 
-bash
+```bash
 
 git clone https://github.com/No-Country-simulation/S06-26-AB-Equipe-41.git
 
 cd S06-26-AB-Equipe-41/backend
 
 git checkout backend-diomara
-
+```
 Ou:
 
 1. Vá até o repositório
