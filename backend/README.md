@@ -1,114 +1,79 @@
-# Backend Antenas Brasil - Equipe 41
+# 📡 Backend Antenas Brasil - Equipe 41
 
-**Projeto:** Antenas Brasil - NoCountry Simulaçã0 S06-26-AB
-**Squad:** Equipe 41
-**Responsável Backend:** Diomara - Mara06-7
+**Projeto:** Antenas Brasil - NoCountry Simulação S06-26-AB  
+**Squad:** Equipe 41  
+**Responsável Backend:** Diomara - Mara06-7  
 **Branch:** `backend-diomara`
 
-**AVISO SPRINT 1**
-> A rota `/dados` utiliza **dados 100% mockados e ficticios** apenas para validação da API.
-> **Não há conexão com os dados reais do CDRView ou arquivo `antenas_flp.csv` nesta Sprint.**
+> ⚠️ **AVISO SPRINT 1**  
+> A rota `/dados` utiliza **dados 100% mockados e fictícios** apenas para validação da API.  
+> **Não há conexão com dados reais do CDRView ou arquivo `antenas_flp.csv` nesta Sprint.**  
 > Integração com dados reais prevista para Sprint 2.
 
+---
 
-## Semana 1 - Sprint 1 | Diomara
+## 🚀 Semana 1 - Sprint 1 | Diomara - CONCLUÍDA ✅
 
 ### **O que foi entregue na S1**
 Servidor Flask com 2 endpoints funcionais:
 
-**Endpoint:** `/` e `/dados`
-**Método:** `GET` e`POST`
-**Descrição:**  (`GET`)Healthcheck. Retorna status do servidor. (`POST`)Retorna JSON **mockado** para teste inicial do frontend.
-**Status:** Funcinando.
+| Endpoint | Método | Descrição | Status |
+| --- | --- | --- | --- |
+| `/` | `GET` | Healthcheck. Retorna status do servidor. | ✅ Funcionando |
+| `/dados` | `POST` | Retorna JSON **mockado** para teste inicial do frontend. | ✅ Funcionando |
 
 **Exemplo de resposta `/dados` - DADOS FICTÍCIOS:**
 ```json
-
 {
-    "regiao": "Centro",
-    "indicador": "emprego",
-    "valor": "85",
-    "unidade": "%"
+  "regiao": "Centro",
+  "indicador": "emprego", 
+  "valor": "85",
+  "unidade": "%"
 }
 ```
 
-**Passo 1: Baixar o código**
+### **Como rodar na tua máquina**
 
+**Passo 1: Baixar o código**
+```bash
 git clone https://github.com/No-Country-simulation/S06-26-AB-Equipe-41.git
 cd S06-26-AB-Equipe-41/backend
 git checkout backend-diomara
+```
 
-**Passo 2: Criar o ambiente virtual e instalar o Flask**
-
-No mesmo terminal digite:
-
+**Passo 2: Criar ambiente virtual e instalar Flask**
+```bash
 py -m venv .venv
 .venv\Scripts\activate
 pip install flask
-
-
-**Passo 3: Ligar o servidor**
-
-No mesmo terminal digite:
-
-py app.py
-
-
-#______________________________________________________________________________________________________________________#
-
-## Semana 0 - Setup Inicial | Diomara
-
-### O que esse código faz hoje
-
-Servidor básico em Flask. Tem só 1 rota `GET /` que returna uma frase.
-
-Serve para provar que o ambiente Python + Flask está funcionando.
-
-
-### Como rodar na tua máquina - PASSO A PASSO
-
-**Passo 1: Baixar o código**
-
-Se ainda não tem o projeto:
-
-```bash
-
-git clone https://github.com/No-Country-simulation/S06-26-AB-Equipe-41.git
-
-cd S06-26-AB-Equipe-41/backend
-
-git checkout backend-diomara
 ```
-Ou:
-
-1. Vá até o repositório
-2. Clique no main, selecione backend-diomara
-3. Entre no app.py e cópie o código
-4. Abra o VScode cole o código, e abra o terminal
-
-
-**Passo 2: Instalar o Flask**
-
-No mesmo terminal digite:
-
-py -m pip install flask
-
 
 **Passo 3: Ligar o servidor**
-
+```bash
 py app.py
+```
+Terminal irá retornar: `Running on http://127.0.0.1:5000`
 
-O terminal irá retornar:
+**Passo 4: Testar os endpoints**
+1. **GET `/`** no navegador: `http://localhost:5000/`
+2. **POST `/dados`** no Thunder Client: Status `200 OK` + JSON
 
-Running on http://127.0.0.1:5000
+---
 
-Deixa rodando.
+## 📋 Semana 0 - Setup Inicial | Diomara
 
+### **O que esse código fazia**
+Servidor básico em Flask com 1 rota `GET /` que retorna uma frase.
 
-**Passo 4: Testar no navegador**
+Servia para provar que o ambiente Python + Flask estava funcionando.
 
-1. Abre o Chrome ou o seu navegador
-2. Degite na barra de endereço: http://localhost:5000 ou o endereço mostrado no terminal anteriormente
-3. Aperta Enter
+---
 
-Resultado esperado: Backend da Diomara funcionando!
+## 🛠️ Stack Utilizada
+- Python 3.11
+- Flask 3.0
+- Git + GitHub
+
+---
+**Desenvolvido por Diomara - Backend Team | NoCountry S13**  
+**S1:** Estrutura da API validada com dados fictícios para teste.
