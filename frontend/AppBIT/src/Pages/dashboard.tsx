@@ -19,8 +19,7 @@ export default function Dashboard() {
             <p className="dashboard-subtitle">Panorama de inclusão digital e equidade social</p>
           </div>
         </div>
-
-        {/* TUA LÓGICA: 4 cards */}
+        
         <div className="metrics-grid">
           <MetricCard title="Cobertura de Rede Média" value="78,4%" change="+8,2%" />
           <MetricCard title="Taxa de Emprego Média" value="61,3%" change="+5,7%" />
@@ -28,9 +27,7 @@ export default function Dashboard() {
           <MetricCard title="Indicador de Saúde Mental" value="72,6%" change="+4,3%" />
         </div>
 
-        {/* GRID 3 COLUNAS - acrescentei sem mexer no Mapa e Ranking */}
         <div className="dashboard-grid-3">
-          {/* COLUNA ESQUERDA - nova, não mexe na tua lógica */}
           <div className="left-column">
             <div className="card">
               <h3>Consultas Recentes</h3>
@@ -54,10 +51,8 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* TUA LÓGICA: Mapa - continua igual */}
           <MapSection />
-
-          {/* COLUNA DIREITA - acrescentei, Ranking continua teu */}
+          
           <div className="right-column">
             <RankingCard />
 
@@ -73,7 +68,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* ABAIXO DO MAPA - acrescentei */}
         <div className="card ai-question">
           <h3>Faça uma pergunta para a IA</h3>
           <div className="ai-input">
