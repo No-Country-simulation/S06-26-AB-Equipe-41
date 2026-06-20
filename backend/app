@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app=Flask(__name__)
 
 app.config[‘SQLALCHEMY_DATABASE_URI’]=‘sqlite:///pesquisas.db’
-app.config[‘SQLALCHEMY_TRACK_MODIFICATION’]=False
+app.config[‘SQLALCHEMY_TRACK_MODIFICATIONS’]=False
 
 db =SQLAlchemy(app)
 
@@ -16,7 +16,7 @@ class pesquisas(db.Model):
 def principal():
      return render_template(‘principal.html’)
 
-@app.route(‘/visaogeral/<int:id>’, methods=[‘GET’, ‘POST’])
+@app.route(‘/visaogeral’, methods=[‘GET’, ‘POST’])
 def visao():
       if request.method==‘POST’:
            pesquisa=request.form[‘pesquisa’]
