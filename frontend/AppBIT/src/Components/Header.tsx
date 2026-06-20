@@ -1,19 +1,19 @@
 export default function Header() {
   return (
-    <div className="flex justify-end items-center mb-8">
-      <div className="flex gap-3">
-        <select className="border rounded-lg px-4 py-2">
+    <div className="header-bar">
+      <div className="header-filters">
+        <select className="header-select">
           <option>Angola</option>
           <option>Brasil</option>
         </select>
 
-        <select className="border rounded-lg px-4 py-2">
+        <select className="header-select">
           <option>Últimos 12 meses</option>
           <option>Últimos 6 meses</option>
           <option>Últimos 30 dias</option>
         </select>
 
-        <button className="bg-indigo-600 text-white px-5 py-2 rounded-lg">
+        <button className="header-btn">
           Exportar Relatório
         </button>
       </div>

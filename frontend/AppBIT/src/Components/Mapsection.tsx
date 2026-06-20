@@ -1,15 +1,17 @@
+import './Mapsection.css'
+
 export default function MapSection() {
   return (
-    <div className="bg-white rounded-xl p-4 shadow-sm">
-      <h2 className="font-semibold mb-4">
-        Mapa de Inclusão Digital
-      </h2>
-
-      <img
-        src="/mapa-angola.png"
-        alt="Mapa"
-        className="rounded-lg w-full"
-      />
+    <div className="map-card">
+      <h2 className="map-card-title">Mapa de Inclusão Digital</h2>
+      
+      <div className="map-wrapper">
+        <img
+           src="/angola.png.png"
+           alt="Mapa de Angola"
+           className="map-image"
+        />
+      </div>
     </div>
-  );
+  )
 }

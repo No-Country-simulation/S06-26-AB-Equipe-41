@@ -22,22 +22,22 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="w-72 bg-slate-900 text-white p-5">
-      <div className="mb-10">
-        <h2 className="text-3xl font-bold text-indigo-400">
+    <aside className="sidebar">
+      <div className="sidebar-logo-box">
+        <h2 className="sidebar-logo">
           BiT
         </h2>
 
-        <p className="text-sm text-slate-400">
+        <p className="sidebar-subtitle">
           Painel de Dados Públicos
         </p>
       </div>
 
-      <nav className="space-y-2">
+      <nav className="sidebar-nav">
         {items.map((item, index) => (
           <button
             key={index}
-            className="flex items-center gap-3 w-full p-3 rounded-lg hover:bg-slate-800"
+            className="sidebar-item"
           >
             <item.icon size={20} />
             {item.text}

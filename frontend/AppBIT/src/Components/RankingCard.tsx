@@ -8,21 +8,21 @@ const regions = [
 
 export default function RankingCard() {
   return (
-    <div className="bg-white p-5 rounded-xl shadow-sm">
-      <h2 className="font-semibold mb-4">
+    <div className="ranking-card">
+      <h2 className="ranking-title">
         Ranking Provincial
       </h2>
 
       {regions.map(([name, score], index) => (
         <div
           key={name}
-          className="flex justify-between py-2 border-b"
+          className="ranking-row"
         >
-          <span>
+          <span className="ranking-name">
             {index + 1}. {name}
           </span>
 
-          <span className="font-semibold">
+          <span className="ranking-score">
             {score}
           </span>
         </div>

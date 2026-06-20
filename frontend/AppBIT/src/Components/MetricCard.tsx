@@ -10,16 +10,16 @@ export default function MetricCard({
   change,
 }: Props) {
   return (
-    <div className="bg-white rounded-xl p-5 shadow-sm">
-      <p className="text-slate-500 text-sm">
+    <div className="metric-card">
+      <p className="metric-label">
         {title}
       </p>
 
-      <h3 className="text-4xl font-bold mt-2">
+      <h3 className="metric-value">
         {value}
       </h3>
 
-      <p className="text-green-600 mt-2">
+      <p className="metric-change">
         ↑ {change}
       </p>
     </div>
