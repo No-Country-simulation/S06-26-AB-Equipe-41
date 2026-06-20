@@ -1,0 +1,59 @@
+from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+
+app=Flask(__name__)
+
+app.config[‘SQLALCHEMY_DATABASE_URI’]=‘sqlite:///pesquisas.db’
+app.config[‘SQLALCHEMY_TRACK_MODIFICATION’]=False
+
+db =SQLAlchemy(app)
+
+class pesquisas(db.Model):
+     id=db.Column(db.Integer, primary_key=True)
+     pesquisa=db.Column(db.Text)
+
+@app.route(‘/‘)
+def principal():
+     return render_template(‘principal.html’)
+
+@app.route(‘/visaogeral/<int:id>’, methods=[‘GET’, ‘POST’])
+def visao():
+      if request.method==‘POST’:
+           pesquisa=request.form[‘pesquisa’]
+           nova_pesq=pesquisas(pesquisa=pesquisa)
+           db.session.add(nova_pesq)
+           db.session.commit()
+      
+      historico=pesquisas.query.order_by
+(pesquisas.id.desc()).limit(5).all()
+
+     return render_template(‘visaogeral.html’, historico=historico)
+
+@app.route(‘/formacoes‘)
+def formacao():
+     return render_template(‘formacoes.html’)
+
+@app.route(‘/empregabilidade‘)
+def emprego():
+     return render_template(‘empregabilidade.html’)
+
+@app.route(‘/experiencias‘)
+def experiencia():
+     return render_template(‘experiencias.html’)
+
+@app.route(‘/mentorias‘)
+def mentoria():
+     return render_template(‘mentorias.html’)
+
+@app.route(‘/saude‘)
+def saude():
+     return render_template(‘saude.html’)
+
+@app.route(‘/definicoes‘)
+def definicao():
+     return render_template(‘definicoes.html’)
+
+if __name__==‘__main__’:
+   with app.app_context():
+       db.create_all()
+   app.run(debug=True)
