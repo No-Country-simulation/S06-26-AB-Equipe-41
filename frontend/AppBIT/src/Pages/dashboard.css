@@ -290,4 +290,12 @@ body {
     border-radius: 8px;;
 }
 
+.map-card {
+  width: 100%;
+}
 
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+}
