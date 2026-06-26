@@ -1,11 +1,17 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 BASE_URL = "http://127.0.0.1:5000"
 
 def rodar_testes_integrados():
     print("Iniciando testes do  Backend...")
-    res_login = requests.post(f"{BASE_URL}/login", json={"usuario": "gestor_flp", "senha": "Admin@BiT2026"})
+    usuario = os.getenv("ADMIN_USER")
+    senha = os.getenv("ADMIN_PASS")
+
+    res_login = requests.post(f"{BASE_URL}/login", json={"usuario": usuario, "senha": senha})
     if res_login.status_code != 200:
         print("Falha no Login!")
         return

@@ -9,6 +9,9 @@ from routes.chat_routes import chat_bp
 
 load_dotenv()
 
+ADMIN_USER = os.getenv("ADMIN_USER")
+ADMIN_PASS = os.getenv("ADMIN_PASS")
+
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY", "chave-mestra-reserva")
 jwt = JWTManager(app)
@@ -19,7 +22,7 @@ def login():
     usuario = payload.get("usuario")
     senha = payload.get("senha")
 
-    if usuario == "gestor_flp" and senha == "Admin@BiT2026":
+    if usuario == ADMIN_USER and senha == ADMIN_PASS:
         token_acesso = create_access_token(identity=usuario)
         return jsonify({"token": token_acesso}), 200
     
